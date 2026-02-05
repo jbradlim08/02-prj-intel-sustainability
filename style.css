@@ -79,8 +79,9 @@ body {
 }
 
 .timeline-wrap {
-  max-width: 80%;
+  width: 80%;
   margin: auto;
+  overflow: hidden;
 }
 
 .timeline {
@@ -112,10 +113,6 @@ body {
   transform: translateY(-4px);
   box-shadow: var(--shadow);
   border-color: rgba(0, 104, 181, 0.4);
-}
-
-.timeline-card:hover::after {
-  border-color: rgba(59, 179, 230, 0.55);
 }
 
 .timeline-card h2 {
@@ -171,7 +168,6 @@ body {
 
 @media (min-width: 900px) {
   .timeline {
-    padding-left: 70px;
     flex-wrap: nowrap;
   }
 
@@ -194,3 +190,4 @@ body {
     left: -14px;
   }
 }
+
