@@ -144,7 +144,7 @@ body {
   overflow-y: visible;
   padding: 12px 0;
   scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.55) rgba(10, 29, 51, 0.35);
 }
@@ -165,10 +165,9 @@ body {
 
 .timeline::before,
 .timeline::after {
-  content: "";
+  content: '';
   position: sticky;
   top: 0;
-  align-self: stretch;
   width: 60px;
   flex: 0 0 60px;
   pointer-events: none;
