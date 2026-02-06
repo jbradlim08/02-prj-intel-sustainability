@@ -221,7 +221,7 @@ body {
 
 .timeline-image {
   width: 100%;
-  min-height: 200px;
+  height: 220px;
   object-fit: cover;
   border-radius: 10px;
   margin-bottom: 10px;
@@ -263,9 +263,6 @@ body {
     flex-wrap: nowrap;
   }
 
-  .timeline-card::before {
-    left: -48px;
-  }
 }
 
 @media (max-width: 680px) {
