@@ -8,7 +8,7 @@
   --bg: #eef3f9;
   --card: #ffffff;
   --ink: #0a1d33;
-  --muted: #4b5b6b;
+  --muted: #617a94;
   --line: #b7c6d8;
   --shadow: 0 12px 24px rgba(5, 30, 60, 0.12);
   --intel-blue-to-white: linear-gradient(180deg, rgba(147, 204, 248, 0.46) 0%, rgba(255, 255, 255, 0.98) 78%);
@@ -36,12 +36,10 @@ body {
 
 .hero {
   min-height: 80vh;
-  padding: 56px 20px;
+  padding: 20px 20px;
   text-align: center;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background: url("img/2.jpg");
+  background: url("img/background.png");
   background-size: cover;
   background-position: center;
 }
@@ -49,35 +47,43 @@ body {
 .hero-inner {
   width: 100%;
   max-width: 100%;
-  margin: 0 auto;
-  padding: 32px 28px 36px;
-  /* background: var(--intel-blue-to-white); */
-  /* border: 1px solid rgba(0, 104, 181, 0.18); */
-  border-radius: 22px;
-  /* box-shadow: 0 20px 40px rgba(9, 45, 85, 0.16); */
-  /* backdrop-filter: blur(6px); */
+  flex: 1;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.hero-text{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 16px;
+  justify-content: flex-end; /*make it appear at the bottom*/
 }
 
 .intel-logo {
-  width: clamp(120px, 18vw, 180px);
+  width: clamp(220px, 30vw, 320px);
   height: auto;
-  margin-bottom: 18px;
+  flex: 2;
+  margin-top: 0;
 }
 
 .hero h1 {
-  margin: 0 0 12px;
+  max-width: 80%;
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
   font-size: clamp(2.2rem, 4vw, 3.2rem);
-  letter-spacing: 0.6px;
   color: var(--intel-blue-dark);
 }
 
+
 .hero-subhead {
-  margin: 0 auto;
   max-width: 80%;
   font-size: clamp(1rem, 2.1vw, 1.2rem);
   color: var(--muted);
-  line-height: 1.6;
+  line-height: 1;
 }
 
 .timeline-wrap {
@@ -86,6 +92,13 @@ body {
   overflow: visible;
   padding: 16px 0;
   position: relative;
+}
+
+.timeline-title {
+  text-align: center;
+  color: #ffffff;
+  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  margin-bottom: 18px;
 }
 
 .timeline {
