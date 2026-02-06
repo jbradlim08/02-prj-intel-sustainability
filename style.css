@@ -23,15 +23,48 @@
   padding: 0;
 }
 
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: "Source Sans 3", "Segoe UI", Tahoma, sans-serif;
+  font-size: 1rem;
   color: var(--ink);
   background:
     radial-gradient(circle at 15% 10%, rgba(0, 104, 181, 0.35), transparent 45%),
     radial-gradient(circle at 85% 15%, rgba(59, 179, 230, 0.28), transparent 48%),
     linear-gradient(120deg, #0a1d33 0%, #102942 45%, #163553 100%);
   min-height: 100vh;
+}
+
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding: 14px 18px;
+  background: rgba(10, 29, 51, 0.55);
+  backdrop-filter: blur(6px);
+  z-index: 10;
+}
+
+.navbar a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  font-size: 1.2em;
+}
+
+.navbar a:hover {
+  opacity: 0.8;
 }
 
 .hero {
@@ -74,14 +107,14 @@ body {
 .hero h1 {
   max-width: 80%;
   font-family: "Space Grotesk", "Segoe UI", sans-serif;
-  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-size: clamp(2.2em, 4vw, 3.2em);
   color: var(--intel-blue-dark);
 }
 
 
 .hero-subhead {
   max-width: 80%;
-  font-size: clamp(1rem, 2.1vw, 1.2rem);
+  font-size: clamp(1em, 2.1vw, 1.2em);
   color: var(--muted);
   line-height: 1;
 }
@@ -97,7 +130,7 @@ body {
 .timeline-title {
   text-align: center;
   color: #ffffff;
-  font-size: clamp(2.4rem, 4vw, 3.2rem);
+  font-size: clamp(2.4em, 4vw, 3.2em);
   margin-bottom: 18px;
 }
 
@@ -176,13 +209,13 @@ body {
 
 .timeline-card h2 {
   /* margin: 0 0 6px; */
-  font-size: 1.6rem;
+  font-size: 1.6em;
   color: var(--intel-blue);
 }
 
 .timeline-card h3 {
   margin: 0 0 10px;
-  font-size: 1.2rem;
+  font-size: 1.2em;
   color: var(--intel-blue-dark);
 }
 
@@ -221,7 +254,7 @@ body {
 .timeline-hint {
   margin: 26px 0 0;
   text-align: center;
-  font-size: 0.95rem;
+  font-size: 0.95em;
   color: var(--timeline-hint);
 }
 
