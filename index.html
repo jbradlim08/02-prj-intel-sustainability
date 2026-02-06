@@ -75,7 +75,7 @@
       </article>
 
       <!-- Card 5: 2006 -->
-      <article class="timeline-card">
+      <article class="timeline-card" id="year-2006">
         <h2>2006</h2>
         <h3>Peak GHG Emissions</h3>
         <img class="timeline-image" src="img/1.jpg" alt="Intel sustainability milestone" />
@@ -135,7 +135,34 @@
         </p>
       </article>
     </section>
+    
+    <!-- Timeline Hint -->
     <p class="timeline-hint">Scroll to view timeline | Hover over cards to learn more!</p>
+
   </main>
+  <script>
+    window.addEventListener("load", () => {
+      const target = document.getElementById("year-2006");
+      if (target) {
+        target.scrollIntoView({ behavior: "auto", inline: "center", block: "nearest" });
+      }
+    });
+  </script>
+  <script>
+    window.addEventListener("load", () => {
+      const timeline = document.querySelector(".timeline");
+      if (!timeline) return;
+      timeline.addEventListener(
+        "wheel",
+        (event) => {
+          if (timeline.scrollWidth <= timeline.clientWidth) return;
+          event.preventDefault();
+          const delta = event.deltaY || event.deltaX;
+          timeline.scrollLeft += delta * 2.5;
+        },
+        { passive: false }
+      );
+    });
+  </script>
 </body>
 </html>
